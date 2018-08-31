@@ -5,7 +5,7 @@ Simple function to generate random numbers and post them to a [riff on Knative](
 
 #### deploy the function
 ```
-riff service create random --image jldec/random:v0.0.1
+riff service create random --image jldec/random:v0.0.2
 ```
 
 #### configure and invoke

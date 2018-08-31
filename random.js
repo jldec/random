@@ -7,16 +7,21 @@ var timer = null
 //  post random int < 1000 to url at freq and url
 // input config = { url:xxx, freq:n }
 module.exports = config => {
+  var out = ''
   clearTimer();
-  if (config.hasOwnProperty('url')) { url = config.url }
-  if (config.hasOwnProperty('freq')) { freq = config.freq }
+  if (config.hasOwnProperty) {
+    if (config.hasOwnProperty('url')) { url = config.url }
+    if (config.hasOwnProperty('freq')) { freq = config.freq }
+  }
   if (freq && url) { // stop if freq is falsy
     timer = setInterval(doPost, 1000/freq)
-    console.log('posting to %s %s/s', url, freq)
+    out = `posting to ${url} ${freq}/s`
   }
   else {
-    console.log('NOT posting to %s %s/s', url, freq)
+    out = `not posting: url=${url} freq=${freq}`
   }
+  console.log(out)
+  return out;
 }
 
 function doPost() {
