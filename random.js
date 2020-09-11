@@ -31,7 +31,9 @@ function doPost() {
     body: num,
     headers: { 'Content-Type': 'application/json' }
   })
-  .then(res => console.log('posted %s to %s %s', num, url, res.status))
+  .then(res => {
+    console.log('posted %s to %s %s %s', num, url, res.status, res.text())
+  })
   .catch(err => {
     console.log(err)
     clearTimer() // don't retry after error

@@ -1,19 +1,16 @@
 {
   "name": "random",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "repeatedly posts random numbers to another function or channel",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jldec/post-function.git"
+    "url": "git@github.com:jldec/random.git"
   },
   "main": "random.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "Jurgen Leschner, @jldec",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^2.2.0"
+    "node-fetch": "^2.6.1"
   }
 }
